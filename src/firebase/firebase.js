@@ -1,5 +1,5 @@
-import app from 'firebase/app'
-import 'firebase/database'
+import app from 'firebase/app';
+import 'firebase/database';
 
 const config = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -12,12 +12,12 @@ const config = {
 
 class Firebase {
   constructor() {
-    app.initializeApp(config)
+    app.initializeApp(config);
 
-    this.db = app.database()
+    this.db = app.database();
   }
 
-  game = (gid) => this.db.ref(`games/${gid}`)
+  game = (gid) => this.db.ref(`games/${gid}`);
 }
 
-export default Firebase
+export default Firebase;
